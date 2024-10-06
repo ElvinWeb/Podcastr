@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ConvexClientProvider } from "./providers/ConvexClientProvider";
 import { Manrope } from "next/font/google";
 import { ReactNode } from "react";
 import "../styles/globals.css";
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${manrope.className}`}>{children}</body>
+      <body className={`${manrope.className}`}>
+        <ConvexClientProvider>{children}</ConvexClientProvider>
+      </body>
     </html>
   );
 }
