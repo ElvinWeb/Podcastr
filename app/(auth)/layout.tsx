@@ -12,11 +12,10 @@ export default function RootLayout({
         <Image
           src="/images/bg-img.png"
           alt="background"
-          fill
           className="size-full"
+          fill
         />
       </div>
-
       {children}
     </main>
   );
